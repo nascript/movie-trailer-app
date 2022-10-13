@@ -20,7 +20,7 @@ const Banner = ({ netflixOriginals }: Props) => {
 
   console.log('movie', movie)
   return (
-    <div className='flex flex-col space-y-2 py-16 md:space-y-4 lg:h-[65vh] lg:justify-end lg:pb-12 px-4 lg:px-10'>
+    <div className='flex flex-col space-y-2 py-16 md:space-y-4 lg:h-[65vh] lg:justify-end lg:pb-12'>
       <div className='absolute top-0 left-0 -z-10 h-[95vh] w-screen'>
         <Image
           layout='fill'
@@ -29,10 +29,10 @@ const Banner = ({ netflixOriginals }: Props) => {
         />
       </div>
 
-      <h1 className='text-2xl font-bold md:text-4xl lg:text-7xl'>
+      <h1 className='text-shadow-lg text-2xl font-bold md:text-4xl lg:text-7xl'>
         {movie?.title || movie?.name || movie?.original_name}
       </h1>
-      <p className='max-w-xs text-xs text-shadow-md md:max-w-lg md:text-lg lg:max-w-2xl lg:text-2xl'>
+      <p className='max-w-xs text-xs text-shadow-lg md:max-w-lg md:text-lg lg:max-w-2xl lg:text-2xl'>
         {movie?.overview}
       </p>
       <div className='flex space-x-3'>
