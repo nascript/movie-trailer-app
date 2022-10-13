@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/**
+  pada tailwind jika ingin melakukan custom css manualy dapat dilakukan dengan menggunakan @layer
+
+  @layer terbagi menjadi tiga yaitu
+  - @layer base {tag dari HTML itu sendiri misal html, body, button, h1 dll}
+  - @layer components {bisa dari nama kelas atau className tailwindcss bawaan misal text-sm dll}
+
+
+  @ apply sendiri berfungsi untuk menggabungkan style css tailwind dan custom yang kita buat
+*/
+
+@layer base {
+  body {
+    @apply bg-[#141414] text-white;
+  }
+}
+
+@layer components {
+  .headerLink {
+    @apply cursor-pointer text-sm font-light text-[#E5E5E5] transition duration-[.4s] hover:text-[#B3B3B3];
+  }
+}
